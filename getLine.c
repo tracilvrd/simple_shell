@@ -140,6 +140,7 @@ int _getline(info_t *info, char **ptr, size_t *length)
 	new_p = _realloc(p, s, s ? s + k : k + 1);
 	if (!new_p) /* MALLOC FAILURE! */
 		return (p ? free(p), -1 : -1);
+	
 	if (s)
 		_strncat(new_p, buf + i, k - i);
 	else
